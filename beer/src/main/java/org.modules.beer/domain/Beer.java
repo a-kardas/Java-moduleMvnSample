@@ -30,4 +30,9 @@ public class Beer extends Auditable {
         else
             return false;
     }
+
+    @Override
+    public String toString(){
+        return productName;
+    }
 }

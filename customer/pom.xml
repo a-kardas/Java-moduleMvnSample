@@ -11,9 +11,6 @@
 
     <artifactId>customer</artifactId>
 
-<!--    <build>
-        <sourceDirectory>src/main/java/org.modules.customer</sourceDirectory>
-    </build>-->
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
     </build>

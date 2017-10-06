@@ -11,22 +11,29 @@ public class Customer extends Auditable {
 
     private String name;
 
+    private Integer birthYear;
+
     private boolean isOver18;
+
+    public Customer(String name, Integer birthYear){
+        this.name = name;
+        this.birthYear = birthYear;
+    }
 
     public boolean isOver18(){
         return isOver18;
     }
 
     public boolean validate(){
-        if(name != null)
+        if(name != null && birthYear != null && isOver18)
             return true;
         else
             return false;
     }
 
-    public boolean validateIsAdult(Integer birthYear){
+    public boolean validateIsAdult(){
         Integer currentYear = LocalDate.now().getYear();
-        if(currentYear - birthYear >= 0)
+        if(currentYear - birthYear >= 18)
             return this.isOver18 = true;
         else
             return this.isOver18 = false;

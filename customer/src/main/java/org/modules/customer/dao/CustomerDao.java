@@ -25,14 +25,16 @@ public class CustomerDao implements BaseDao<Customer> {
     }
 
     @Override
-    public List<Customer> getAll() {
-        return customers.values().stream().collect(Collectors.toList());
+    public Map<Long, Customer> getAll() {
+        return customers;
     }
 
     @Override
     public void add(Customer obj) {
-        if(obj.validate() && obj.isOver18())
+        if(obj.validate() && obj.isOver18()) {
+            System.out.println("Welcome on board!");
             customers.put(++index, obj);
+        }
         else
             return;
     }

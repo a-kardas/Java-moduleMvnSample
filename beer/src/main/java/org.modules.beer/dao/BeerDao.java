@@ -31,8 +31,8 @@ public class BeerDao implements BaseDao<Beer>{
     }
 
     @Override
-    public List<Beer> getAll() {
-        return beers.values().stream().collect(Collectors.toList());
+    public Map<Long, Beer> getAll() {
+        return beers;
     }
 
     @Override
