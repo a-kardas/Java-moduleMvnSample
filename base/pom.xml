@@ -11,8 +11,4 @@
 
     <artifactId>base</artifactId>
 
- <!--   <build>
-        <sourceDirectory>src/main/java/org/modules/base/</sourceDirectory>
-    </build>-->
-
 </project>
